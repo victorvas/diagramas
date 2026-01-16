@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Eliminación de Guías de un Prealerta">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Inicio -->
+        <mxCell id="2" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Ingreso datos -->
+        <mxCell id="3" value="Ingresar Año y Número de Prealerta (Obligatorio)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="320" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Selección búsqueda -->
+        <mxCell id="4" value="Elegir tipo de búsqueda:\n- Guía específica\n- Todas las guías de una Master" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="190" width="320" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Buscar -->
+        <mxCell id="5" value="Presionar botón &quot;Buscar&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Decisión pertenencia -->
+        <mxCell id="6" value="¿Guía/Master pertenece al Prealerta?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="370" width="220" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Error pertenencia -->
+        <mxCell id="7" value="Error:\nGuía o Master no pertenece al Prealerta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Mostrar guías -->
+        <mxCell id="8" value="Mostrar Guías Encontradas" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="490" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Seleccionar guías -->
+        <mxCell id="9" value="Seleccionar Guías a Eliminar" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="570" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Eliminar decisión -->
+        <mxCell id="10" value="¿Se seleccionó al menos una guía?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="240" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Error selección -->
+        <mxCell id="11" value="Error:\nDebe seleccionar al menos una guía" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="670" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Proceso eliminación -->
+        <mxCell id="12" value="Eliminar Guías Seleccionadas:\n1. Eliminar registros en Orden_Detalle_Terminal\n2. Actualizar mft_ano = año actual\n   mft_nro = &quot;00099999&quot;\n3. Crear incidencia indicando usuario y prealerta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="260" y="770" width="360" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- Fin -->
+        <mxCell id="13" value="Fin" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="930" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="e1" edge="1" parent="1" source="2" target="3" style="endArrow=block;html=1;"/>
+        <mxCell id="e2" edge="1" parent="1" source="3" target="4" style="endArrow=block;html=1;"/>
+        <mxCell id="e3" edge="1" parent="1" source="4" target="5" style="endArrow=block;html=1;"/>
+        <mxCell id="e4" edge="1" parent="1" source="5" target="6" style="endArrow=block;html=1;"/>
+        <mxCell id="e5" edge="1" parent="1" source="6" target="7" style="endArrow=block;html=1;">
+          <mxGeometry relative="1"/>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="6" target="8" style="endArrow=block;html=1;">
+          <mxGeometry relative="1"/>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="8" target="9" style="endArrow=block;html=1;"/>
+        <mxCell id="e8" edge="1" parent="1" source="9" target="10" style="endArrow=block;html=1;"/>
+        <mxCell id="e9" edge="1" parent="1" source="10" target="11" style="endArrow=block;html=1;"/>
+        <mxCell id="e10" edge="1" parent="1" source="10" target="12" style="endArrow=block;html=1;"/>
+        <mxCell id="e11" edge="1" parent="1" source="12" target="13" style="endArrow=block;html=1;"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
