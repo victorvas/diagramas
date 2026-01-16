@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Eliminación de Guías de un Prealerta">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="inicio" value="Inicio" style="ellipse;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="datos" value="Ingresar Año y Número de Prealerta (Obligatorio)" style="rounded=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="320" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tipo" value="Elegir tipo de búsqueda: Guía o Master" style="rounded=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="190" width="320" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="buscar" value="Presionar Buscar" style="rounded=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="270" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decision1" value="¿Pertenece al Prealerta?" style="rhombus;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="error1" value="Error: Guía o Master no pertenece al Prealerta" style="rounded=1;fillColor=#f8cecc;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mostrar" value="Mostrar Guías Encontradas" style="rounded=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="seleccionar" value="Seleccionar Guías a Eliminar" style="rounded=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="530" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decision2" value="¿Seleccionó al menos una guía?" style="rhombus;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="610" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="error2" value="Error: Debe seleccionar al menos una guía" style="rounded=1;fillColor=#f8cecc;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="proceso" value="Eliminar Guías:\n1. Eliminar en Orden_Detalle_Terminal\n2. Actualizar mft_ano y mft_nro=00099999\n3. Crear incidencia con usuario y prealerta" style="rounded=1;fillColor=#dae8fc;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="720" width="360" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fin" value="Fin" style="ellipse;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="880" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="e1" edge="1" parent="1" source="inicio" target="datos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="datos" target="tipo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="tipo" target="buscar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="buscar" target="decision1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="decision1" target="error1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="decision1" target="mostrar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="mostrar" target="seleccionar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="seleccionar" target="decision2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
